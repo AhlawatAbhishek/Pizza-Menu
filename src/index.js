@@ -48,11 +48,11 @@ const pizzaData = [
 
 function App() {
   return (
-    <main className="menu">
+    <div className="container">
       <Header />
       <Menu />
       <Footer />
-    </main>
+    </div>
   );
 }
 
@@ -75,13 +75,13 @@ function Header() {
 }
 function Menu() {
   return (
-    <div>
+    <main className="menu">
       <h2>Our Menu</h2>
       <Pizza />
       <Pizza />
       <Pizza />
       <Pizza />
-    </div>
+    </main>
   );
 }
 function Footer() {
