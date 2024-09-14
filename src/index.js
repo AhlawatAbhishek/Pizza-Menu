@@ -48,11 +48,11 @@ const pizzaData = [
 
 function App() {
   return (
-    <div className="container">
+    <main className="menu">
       <Header />
       <Menu />
       <Footer />
-    </div>
+    </main>
   );
 }
 
