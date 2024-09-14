@@ -56,16 +56,6 @@ function App() {
   );
 }
 
-function Pizza() {
-  return (
-    <div>
-      <img src="pizzas/spinaci.jpg" alt="Pizza Margherita" />
-      <h3>Pizza Spinaci</h3>
-      <p>Tomato, mozarella, spinach, and ricotta cheese</p>
-    </div>
-  );
-}
-
 function Header() {
   return (
     <header className="header">
@@ -77,19 +67,29 @@ function Menu() {
   return (
     <main className="menu">
       <h2>Our Menu</h2>
-      <Pizza />
-      <Pizza />
-      <Pizza />
-      <Pizza />
+      <Pizza
+        name="Pizza Spinaci"
+        ingredients="Tomato, mozarella, spinach, and ricotta cheese"
+        photoName="pizzas/spinaci.jpg"
+      />
     </main>
   );
 }
+function Pizza({ name, ingredients, photoName }) {
+  return (
+    <div>
+      <img src={photoName} alt="Pizza Margherita" />
+      <h3>{name}</h3>
+      <p>{ingredients}</p>
+    </div>
+  );
+}
 function Footer() {
-  // const hour = new Date().getHours();
-  // const openHour = 8;
-  // const closeHour = 22;
-  // const isOpen = hour >= openHour && hour <= closeHour;
-  // console.log(isOpen);
+  const hour = new Date().getHours();
+  const openHour = 12;
+  const closeHour = 22;
+  const isOpen = hour >= openHour && hour <= closeHour;
+  console.log(isOpen);
   return (
     <footer>{new Date().toLocaleDateString()}. We're currently open</footer>
   );
