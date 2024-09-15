@@ -71,16 +71,26 @@ function Menu() {
         name="Pizza Spinaci"
         ingredients="Tomato, mozarella, spinach, and ricotta cheese"
         photoName="pizzas/spinaci.jpg"
+        price={12}
+      />
+      <Pizza
+        name="Pizza Funghi"
+        ingredients="Tomato, mozarella, mushrooms, and onion"
+        photoName="pizzas/funghi.jpg"
+        price={12}
       />
     </main>
   );
 }
-function Pizza({ name, ingredients, photoName }) {
+function Pizza({ name, ingredients, photoName, price }) {
   return (
-    <div>
+    <div className="pizza">
       <img src={photoName} alt="Pizza Margherita" />
-      <h3>{name}</h3>
-      <p>{ingredients}</p>
+      <div>
+        <h3>{name}</h3>
+        <p>{ingredients}</p>
+        <span>{price}</span>
+      </div>
     </div>
   );
 }
