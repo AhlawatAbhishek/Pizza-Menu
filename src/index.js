@@ -113,9 +113,12 @@ function Footer() {
   console.log(isOpen);
   return (
     <footer>
-      {isOpen
-        ? `${new Date().toLocaleDateString()} We're currently open`
-        : "We're currently closed"}
+      {isOpen && (
+        <div className="order">
+          <p>We're open until {closeHour}:00. Come visit us or order online</p>
+          <button className="btn">Order</button>
+        </div>
+      )}
     </footer>
   );
 }
