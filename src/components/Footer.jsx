@@ -1,6 +1,8 @@
 import React from "react";
 import Order from "./Order";
-export default function Footer() {
+export default function Footer(params) {
+  console.log("Footer params:");
+  console.log(params);
   const hour = new Date().getHours();
   const openHour = 12;
   const closeHour = 22;
@@ -20,7 +22,8 @@ export default function Footer() {
         <Order closeHour={closeHour} />
       ) : (
         <p>
-          We are currently closed. We're happy to welcome you between {openHour}
+          We are currently closed. We&apos;re happy to welcome you between{" "}
+          {openHour}
           :00 and {closeHour}:00
         </p>
       )}
