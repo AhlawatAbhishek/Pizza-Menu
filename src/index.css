@@ -135,10 +135,6 @@ body {
   margin-bottom: auto;
 }
 
-.pizza p::before {
-  content: "🌶️";
-}
-
 .pizza span {
   display: block;
   font-size: 1.6rem;
